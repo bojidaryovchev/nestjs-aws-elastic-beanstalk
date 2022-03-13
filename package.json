@@ -21,7 +21,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "deploy": "npm ci && npm run build && npm run start:prod",
     "prisma:migrate": "npx prisma migrate dev",
-    "prisma:studio": "npx prisma studio"
+    "prisma:studio": "npx prisma studio",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@nestjs/common": "8.4.0",
@@ -51,7 +52,10 @@
     "eslint": "8.11.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.4",
     "jest": "27.5.1",
+    "lint-staged": "12.3.5",
+    "organize-imports-cli": "0.9.0",
     "prettier": "2.5.1",
     "prisma": "3.10.0",
     "source-map-support": "0.5.21",
@@ -78,5 +82,12 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix",
+      "prettier --write",
+      "organize-imports-cli"
+    ]
   }
 }
