@@ -22,7 +22,7 @@
     "deploy": "npm ci && npm run build && npm run start:prod",
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:studio": "npx prisma studio",
-    "prepare": "npx husky install"
+    "prepare": "npm install husky && npm husky install"
   },
   "dependencies": {
     "@nestjs/common": "8.4.0",
