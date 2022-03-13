@@ -21,8 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "deploy": "npm ci && npm run build && npm run start:prod",
     "prisma:migrate": "npx prisma migrate dev",
-    "prisma:studio": "npx prisma studio",
-    "prepare": "npm install husky && npx husky install"
+    "prisma:studio": "npx prisma studio"
   },
   "dependencies": {
     "@nestjs/common": "8.4.0",
