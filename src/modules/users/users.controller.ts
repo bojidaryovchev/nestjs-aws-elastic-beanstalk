@@ -11,7 +11,7 @@ export class UsersController {
   @Get()
   @ApiResponse({
     status: 200,
-    type: UserEntity,
+    type: [UserEntity],
   })
   async getUsers(): Promise<UserEntity[]> {
     return await this.usersService.getUsers();
