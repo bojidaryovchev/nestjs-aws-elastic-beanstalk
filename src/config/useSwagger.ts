@@ -8,5 +8,5 @@ export default async function (app: INestApplication): Promise<void> {
     deepScanRoutes: true,
   });
 
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('swagger', app, document);
 }
