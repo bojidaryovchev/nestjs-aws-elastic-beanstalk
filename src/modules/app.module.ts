@@ -12,6 +12,7 @@ import { UsersModule } from './users/users.module';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       introspection: !isProduction(),
+      playground: !isProduction(),
     }),
   ],
 })
